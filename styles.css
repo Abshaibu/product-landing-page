@@ -93,7 +93,8 @@ nav {
     width: 17px;
 }
 
-.show-nav {
+.show-nav,
+.show-cart {
     transform: translateY(0);
     transition: all 0.5s ease;
 }
@@ -123,6 +124,7 @@ nav ul {
     font-size: .6rem;
     font-weight: 700;
     border-radius: 50px;
+    display: none;
 }
 
 .cart-wrapper {
@@ -134,8 +136,7 @@ nav ul {
     width: 361px;
     min-height: 300px;
     border-radius: 10px;
-    transform: translateY(30rem);
-    opacity: 0;
+    transform: translateY(-1000px);
     transition: all 0.5s ease-in;
     box-shadow:
             0.3px 0px 3.6px rgba(0, 0, 0, 0.024),
@@ -143,12 +144,6 @@ nav ul {
             2.1px 0px 24.1px rgba(0, 0, 0, 0.046),
             7px 0px 80px rgba(0, 0, 0, 0.07)
 ;
-}
-
-.show-cart {
-    transform: translateY(0);
-    opacity: 1;
-    transition: all 0.5s ease;
 }
 
 h3 {
@@ -374,6 +369,7 @@ p {
         font-weight: 400;
         font-size: .96rem;
         padding-bottom: 2.22rem;
+        color: hsl(210, 2%, 47%);
     }
 
     li a:hover {
