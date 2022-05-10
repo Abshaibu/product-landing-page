@@ -26,5 +26,5 @@ cart.addEventListener('click', (e) => {
 
 // Adding quantity to cart
 quantityBtns.addEventListener('click', (e) => {
-    if()
+
 })
