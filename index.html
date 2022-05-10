@@ -39,27 +39,68 @@
     </nav>
   </div>
 <div class="cart-user-wrapper">
-  <div class="cart"><img src="./images/icon-cart.svg" alt="icon of a cart">
-  </div>
+  <button class="cart"><img src="./images/icon-cart.svg" alt="icon of a cart">
+    <span class="cart-count">0</span>
+  </button>
   <div
           class="user"><img src="./images/image-avatar.png"
                             alt="image of a man with shades"></div>
 </div>
 </div>
+  <div class="cart-wrapper">
+    <h3>Cart</h3>
+    <div class="cart-summary">
+      <span class="empty-cart">Your cart is empty.</span>
+      <div class="cart-item">
+        <div class="product">
+          <div><img class="cart-img" src="./images/image-product-1.jpg"
+                    alt="image of a shoe"></div>
+          <div class="item-details">
+            <p class="item-name">Place Holder</p>
+            <p
+                    class="item-amount">$<span class="item-price"
+            >null</span> x <span class="item-quantity"> null
+            </span> <span class="dollar-total">$</span><span
+                    class="item-total">null</span></p>
+          </div>
+          <button class="delete-item"><img src="./images/icon-delete.svg"
+                                           alt="a thrash can icon"></button>
+        </div>
+        <button class="checkout-btn">Checkout</button>
+      </div>
+    </div>
+  </div>
+  <div class="container border"></div>
 </header>
 
 <main>
   <section class="product-wrapper">
-    <div class="product-img">
-      <img src="./images/image-product-1.jpg" alt="an image of a shoe">
-      <button
-              class="prev-btn nav-btn"><img src="./images/icon-previous.svg"
-                                    alt="left arrow icon">
-      </button>
-      <button
-              class="next-btn nav-btn"><img src="./images/icon-next.svg"
-                                    alt="left arrow icon">
-      </button>
+    <div>
+      <div class="product-img">
+        <img src="./images/image-product-1.jpg" alt="an image of a shoe">
+        <button
+                class="prev-btn nav-btn"><img src="./images/icon-previous.svg"
+                                              alt="left arrow icon">
+        </button>
+        <button
+                class="next-btn nav-btn"><img src="./images/icon-next.svg"
+                                              alt="left arrow icon">
+        </button>
+      </div>
+      <div class="thumbnail-wrapper">
+        <div class="thumbnail"><img
+                src="./images/image-product-1-thumbnail.jpg"
+                alt="an image of a shoe"></div>
+        <div class="thumbnail"><img
+                src="./images/image-product-2-thumbnail.jpg"
+                alt="an image of a shoe"></div>
+        <div class="thumbnail"><img
+                src="./images/image-product-3-thumbnail.jpg"
+                alt="an image of a shoe"></div>
+        <div class="thumbnail"><img
+                src="./images/image-product-4-thumbnail.jpg"
+                alt="an image of a shoe"></div>
+      </div>
     </div>
     <div class="product-texts container">
       <h5>SNEAKER COMPANY</h5>
