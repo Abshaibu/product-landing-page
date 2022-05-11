@@ -49,7 +49,7 @@ addToCartBtn.addEventListener('click', () => {
     }
 })
 
-// Cart Toggle and item adding to car
+// Cart Toggle and item adding to cart
 const cartSummary = document.querySelector('.cart-summary');
 const emptyCart = document.querySelector('.empty-cart');
 const productName = document.querySelector('.product-name');
@@ -79,6 +79,7 @@ cart.addEventListener('click', () => {
         const deleteBtn = document.querySelector('.delete-item');
         deleteBtn.addEventListener('click', () => {
             cartSummary.innerHTML = emptyCart.innerHTML;
+            cartCount.style.display = 'none';
         })
     }
 })
