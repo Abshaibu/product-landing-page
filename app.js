@@ -75,5 +75,10 @@ cart.addEventListener('click', () => {
         </div>
         <button class="checkout-btn">Checkout</button>
       </div>`;
+        // Deleting a product
+        const deleteBtn = document.querySelector('.delete-item');
+        deleteBtn.addEventListener('click', () => {
+            cartSummary.innerHTML = emptyCart.innerHTML;
+        })
     }
 })
