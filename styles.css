@@ -98,12 +98,6 @@ nav {
     width: 17px;
 }
 
-.show-nav,
-.show-cart {
-    transform: translateY(0);
-    transition: all 0.5s ease;
-}
-
 nav ul {
     display: flex;
     flex-direction: column;
@@ -151,6 +145,12 @@ nav ul {
 ;
 }
 
+.show-nav,
+.show-cart {
+    transform: translateY(0);
+    transition: all 0.5s ease;
+}
+
 h3 {
     padding: 1.5rem;
     border-bottom: 1px solid hsl(219, 9%, 45%);
@@ -163,7 +163,6 @@ h3 {
 .empty-cart {
     color: hsl(219, 9%, 45%);
     transform: translate(84px, 64px);
-    display: none;
 }
 
 .product-wrapper {

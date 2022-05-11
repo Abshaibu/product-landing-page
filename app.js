@@ -49,13 +49,31 @@ addToCartBtn.addEventListener('click', () => {
     }
 })
 
-// Cart Toggle and item adding to cart
+// Cart Toggle and item adding to car
+const cartSummary = document.querySelector('.cart-summary');
+const emptyCart = document.querySelector('.empty-cart');
 const productName = document.querySelector('.product-name');
-const itemName = document.querySelector('.item-name');
-const itemTotal = document.querySelector('.item-total');
-const itemQuantity = document.querySelector('.item-quantity');
 const priceTag = document.querySelector('.price-tag');
-const itemPrice = document.querySelector('.item-price');
 cart.addEventListener('click', () => {
     cartWrapper.classList.toggle('show-cart');
+    if(count > 0) {
+        emptyCart.style.display = 'none';
+        cartSummary.innerHTML = `<div class="cart-item">
+        <div class="product">
+          <div><img class="cart-img" src="./images/image-product-1.jpg"
+                    alt="image of a shoe"></div>
+          <div class="item-details">
+            <p class="item-name">${productName.innerText}</p>
+            <p
+                    class="item-amount">$<span class="item-price"
+            >${priceTag.innerText}</span> x <span class="item-quantity">
+            </span>${cartFigure} <span class="dollar-total">$</span><span
+                    class="item-total">${cartFigure * priceTag.innerText}</span></p>
+          </div>
+          <button class="delete-item"><img src="./images/icon-delete.svg"
+                                           alt="a thrash can icon"></button>
+        </div>
+        <button class="checkout-btn">Checkout</button>
+      </div>`;
+    }
 })
