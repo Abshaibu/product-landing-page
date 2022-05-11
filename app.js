@@ -40,13 +40,14 @@ cartBtns.forEach( cartBtn => {
 // Adding quantity to cart counter
 const cartCount = document.querySelector('.cart-count');
 const addToCartBtn = document.querySelector('.add-to-cart-btn');
-let cartFigure = 0
-addToCartBtn.addEventListener('click', () => {
+let cartFigure = 0;
+addToCartBtn.addEventListener('click', (e) => {
     if(count > 0){
         cartFigure += count;
         cartCount.style.display = 'block';
         cartCount.innerText = cartFigure;
     }
+    e.stopPropagation();
 })
 
 // Cart Toggle and item adding to cart
@@ -77,9 +78,13 @@ cart.addEventListener('click', () => {
       </div>`;
         // Deleting a product
         const deleteBtn = document.querySelector('.delete-item');
-        deleteBtn.addEventListener('click', () => {
-            cartSummary.innerHTML = emptyCart.innerHTML;
+        deleteBtn.addEventListener('click', (e) => {
+            cartSummary.innerHTML = `<span class="empty-cart">Your cart is empty.</span>`;
             cartCount.style.display = 'none';
+            count = 0;
+            cartFigure = 0;
+            qtyFigure.innerText = 0;
+            e.stopPropagation();
         })
     }
 })
