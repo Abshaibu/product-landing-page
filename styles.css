@@ -351,12 +351,13 @@ p {
     }
 
     .cart-wrapper {
-        top: 85px;
+        top: 63px;
     }
 
     header .container {
         justify-content: flex-start;
         gap: 4.8%;
+        position: relative;
     }
 
     .nav-wrapper {
