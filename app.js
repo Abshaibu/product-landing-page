@@ -5,22 +5,16 @@ const cartWrapper = document.querySelector('.cart-wrapper');
 const closeBtn = document.querySelector('.close');
 const navWrapper = document.querySelector('.nav-wrapper');
 
-// Menu Toggler
-menuBtn.addEventListener('click', (e) => {
+// Menu Toggle
+menuBtn.addEventListener('click', () => {
     navWrapper.classList.toggle('show-nav');
 })
 closeBtn.addEventListener('click', (e) => {
     navWrapper.classList.toggle('show-nav');
     e.stopPropagation();
 })
-navWrapper.addEventListener('click', (e) => {
+navWrapper.addEventListener('click', () => {
     navWrapper.classList.toggle('show-nav');
-})
-
-// Cart Toggler
-cart.addEventListener('click', (e) => {
-    cartWrapper.classList.toggle('show-cart');
-    e.stopPropagation();
 })
 
 // Choosing quantity to cart
@@ -44,15 +38,18 @@ cartBtns.forEach( cartBtn => {
 })
 
 // Adding quantity to cart counter
-// const cartCount = document.querySelector('.cart-count');
-// const addToCartBtn = document.querySelector('.add-to-cart-btn');
-// addToCartBtn.addEventListener('click', () => {
-//     if(qtyFigure <= 0){
-//
-//     } else {
-//         cartCount.style.display = 'block';
-//         cartCount.innerText = qtyFigure;
-//     }
-// })
+const cartCount = document.querySelector('.cart-count');
+const addToCartBtn = document.querySelector('.add-to-cart-btn');
+let cartFigure = 0
+addToCartBtn.addEventListener('click', () => {
+    if(count > 0){
+        cartFigure += count;
+        cartCount.style.display = 'block';
+        cartCount.innerText = cartFigure;
+    }
+})
 
-
+// Cart Toggle and item adding to cart
+cart.addEventListener('click', () => {
+    cartWrapper.classList.toggle('show-cart');
+})
