@@ -56,7 +56,12 @@ header {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    position: relative;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 99999;
+    background: #fff;
 }
 
 header .container {
@@ -159,6 +164,10 @@ h3 {
     color: hsl(219, 9%, 45%);
     transform: translate(84px, 64px);
     display: none;
+}
+
+.product-wrapper {
+    margin: 4.5rem auto 0;
 }
 
 .product,
@@ -415,7 +424,6 @@ p {
     .product-wrapper {
         max-width: 930px;
         width: 88%;
-        margin: 0 auto;
         padding: 6rem 0 6rem;
         align-items: center;
     }
