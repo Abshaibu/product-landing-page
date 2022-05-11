@@ -50,6 +50,12 @@ addToCartBtn.addEventListener('click', () => {
 })
 
 // Cart Toggle and item adding to cart
+const productName = document.querySelector('.product-name');
+const itemName = document.querySelector('.item-name');
+const itemTotal = document.querySelector('.item-total');
+const itemQuantity = document.querySelector('.item-quantity');
+const priceTag = document.querySelector('.price-tag');
+const itemPrice = document.querySelector('.item-price');
 cart.addEventListener('click', () => {
     cartWrapper.classList.toggle('show-cart');
 })
