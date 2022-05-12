@@ -24,9 +24,9 @@ const qtyFigure = document.querySelector('.qty-figure');
 cartBtns.forEach( cartBtn => {
     cartBtn.addEventListener('click', (e) => {
         let clicked = e.target.classList;
-        if(clicked.contains('add')){
+        if(clicked.contains('add') && !cartWrapper.classList.contains('show-cart')){
             count++;
-        } else if(clicked.contains('subtract')){
+        } else if(clicked.contains('subtract') && !cartWrapper.classList.contains('show-cart')){
             if(qtyFigure.innerText <= 0){
                 count = 0;
             } else {
@@ -42,7 +42,7 @@ const cartCount = document.querySelector('.cart-count');
 const addToCartBtn = document.querySelector('.add-to-cart-btn');
 let cartFigure = 0;
 addToCartBtn.addEventListener('click', (e) => {
-    if(count > 0){
+    if(count > 0 && !cartWrapper.classList.contains('show-cart')){
         cartFigure += count;
         cartCount.style.display = 'block';
         cartCount.innerText = cartFigure;
@@ -57,7 +57,7 @@ const productName = document.querySelector('.product-name');
 const priceTag = document.querySelector('.price-tag');
 cart.addEventListener('click', () => {
     cartWrapper.classList.toggle('show-cart');
-    if(count > 0) {
+    if(count > 0 && cartFigure > 0) {
         emptyCart.style.display = 'none';
         cartSummary.innerHTML = `<div class="cart-item">
         <div class="product">
